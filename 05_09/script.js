@@ -50,4 +50,6 @@ const content = `
 
 const main = document.querySelector(".maincontent");
 
+const menu = document.createElement("menu");
+
 main.innerHTML = content;

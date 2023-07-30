@@ -10,7 +10,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const imgWithClick = { cursor: "pointer" };
-
+let foo = "bar";
 const Photo = ({
   index,
   onClick,

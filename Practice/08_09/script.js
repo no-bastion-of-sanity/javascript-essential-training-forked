@@ -24,6 +24,8 @@ const frogpack = {
   },
   lidOpen: false,
   image: "../../assets/images/frog.svg",
+  description:
+    "A green kids backpack designed to make the lid look like the face of a frog sticking out its tongue.",
   toggleLid: function (lidStatus) {
     this.lidOpen = lidStatus;
   },
@@ -57,3 +59,23 @@ const content = `
       }</span></li>
     </ul>  
 `;
+
+const addFigure = (dataObj) => {
+  let figure = document.createElement("figure");
+  let img = document.createElement("img");
+  let cap = document.createElement("figcaption");
+  img.setAttribute("src", dataObj.image);
+  img.setAttribute("alt", "");
+  cap.innerHTML = dataObj.description;
+  figure.append(img, cap);
+  return figure;
+};
+
+const createArticle = (pack) => {
+  let article = document.createElement("article");
+  article.innerHTML = content;
+  article.prepend(addFigure(pack));
+  return article;
+};
+
+document.querySelector("main").append(createArticle(frogpack));

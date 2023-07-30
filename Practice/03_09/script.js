@@ -23,4 +23,23 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+  changeColor: function (newColor) {
+    this.color = newColor;
+  },
+  addPocket: function () {
+    ++this.pocketnNum;
+  },
+  removePocket: function () {
+    --this.pocketNum;
+  },
+  changeVolume: function (newVol) {
+    this.volume = newVol;
+  },
 };
+
+console.log("Pockets before: ", backpack.pocketNum);
+console.log("Color Before: ", backpack.color);
+backpack.changeColor("puce");
+backpack.removePocket();
+console.log("Pockets after: ", backpack.pocketNum);
+console.log("Color after: ", backpack.color);

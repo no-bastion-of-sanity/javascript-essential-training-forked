@@ -10,6 +10,8 @@ import backpackObjectArray from "./components/data.js";
  */
 const lidToggle = function () {
   // Find the current backpack object in backpackObjectArray
+  // cf the use of {id} is like this from doc for "find":
+  // const result = inventory.find(({ name }) => name === "cherries");
   let backpackObject = backpackObjectArray.find(
     ({ id }) => id === this.parentElement.id
   );

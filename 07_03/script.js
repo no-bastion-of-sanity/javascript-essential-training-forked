@@ -7,10 +7,14 @@ let backpackContents = ["piggy", "headlamp", "pen"];
 
 console.log(backpackContents);
 
-// backpackContents.forEach(function (item) {
-//   item = `<li>${item}</li>`;
-//   console.log(item);
-// });
+let foobar = backpackContents.forEach(function (item) {
+  item = `<li>${item}</li>`;
+  console.log(item);
+});
+console.log(foobar);
+
+let newContents = backpackContents.map((item) => "<li>" + item + "</li>");
+console.log(newContents);
 
 // let longItems = backpackContents.find(function (item) {
 //   if (item.length >= 5) {

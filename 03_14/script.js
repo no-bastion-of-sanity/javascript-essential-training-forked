@@ -1,11 +1,23 @@
 /**
  * Challenge: Create a new object type
- * 
+ *
  * - Create a new object type "Book" using a class or an object constructor function.
  * - Add at least 5 book objects.
  */
 
+import Book from "./Book.js";
 import Backpack from "./Backpack.js";
+
+const books = new Array();
+books.push(new Book("foo", "bar", "my tribbles", "New York", 1993, 224));
+books.push(new Book("foo", "bar", "my tribbles", "New York", 1993, 224));
+books.push(new Book("foo", "bar", "my tribbles", "New York", 1993, 224));
+books.push(new Book("foo", "bar", "my tribbles", "New York", 1993, 224));
+books.push(new Book("foo", "bar", "my tribbles", "New York", 1993, 224));
+
+// books.forEach((element) => console.log(element.citation));
+//console.log(((Book)books[0]).citation());
+console.log(books[0].citationString());
 
 const everydayPack = new Backpack(
   "Everyday Backpack",
